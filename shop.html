@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="shop.css">
 </head>
 
-<body>
+<body>購物車葉面 
     <div class="cart-container">
         <h2>我的購物車</h2>
         <div class="cart-items" id="cartItems">
@@ -18,7 +18,7 @@
         <div class="cart-summary">
             <h3>總計</h3>
             <p id="totalPrice">商品總金額: $0</p>
-            <a href="checkout page.html" class="checkout-btn" onclick="completeOrder()">確認下單</a>
+            <a href="checkout page.html" class="checkout-btn" onclick="completeOrder(event)">確認下單</a>
         </div>
     </div>
 
@@ -118,16 +118,17 @@
             loadCart();
         }
 
-        // 確認下單並清空購物車
-        function completeOrder() {
+        // 確認下單並存儲金額到 localStorage
+        function completeOrder(event) {
+            event.preventDefault(); // 阻止預設連結跳轉行為
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-            // 模擬結帳處理
-            alert(`您的訂單已成立！總金額為 $${totalPrice}。感謝您的購買！`);
+            // 將總金額存入 localStorage
+            localStorage.setItem('checkoutTotal', totalPrice);
 
-            // 清空購物車
-            localStorage.removeItem('cart');
+            // 跳轉到結帳頁面
+            window.location.href = 'checkout page.html';
         }
 
         // 頁面加載時加載購物車內容
