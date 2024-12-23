@@ -13,7 +13,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
 }
 
@@ -40,12 +41,13 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus {
     border-color: #c41f33;
     outline: none;
-    box-shadow: 0 0 5px rgba(196, 31, 51, 0.5);
+    box-shadow: 0 0 8px rgba(196, 31, 51, 0.5);
 }
 
 button {
@@ -57,11 +59,17 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #a71e2a;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #8d1a23;
+    transform: translateY(1px);
 }
 
 .login-link {
@@ -74,8 +82,25 @@ button:hover {
     color: #c41f33;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .login-link a:hover {
     text-decoration: underline;
+    color: #a71e2a;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .register-container {
+        padding: 15px;
+    }
+
+    .register-container h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
 }

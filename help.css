@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c41f33;
+    font-size: 2rem;
+}
+
+/* FAQ 項目樣式 */
+.faq {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+.faq:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fef4f4;
+}
+
+.faq h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #c41f33;
+    transition: color 0.3s ease;
+}
+
+.faq h3:hover {
+    color: #a71e2a;
+}
+
+/* FAQ 鏈接樣式 */
+.faq a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #c41f33;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.faq a:hover {
+    text-decoration: underline;
+    color: #a71e2a;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .faq {
+        padding: 10px;
+    }
+
+    .faq h3 {
+        font-size: 1rem;
+    }
+
+    .faq a {
+        font-size: 0.9rem;
+    }
+}

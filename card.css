@@ -1,0 +1,131 @@
+ody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #c41f33;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.card-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-box img {
+    width: 80%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-box .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #c41f33;
+    margin-bottom: 15px;
+}
+
+.card-box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.card-box button {
+    background-color: #c41f33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.card-box button:hover {
+    background-color: #a51a28;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+.logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.cart-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c41f33;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cart-link:hover {
+    background-color: #a51a28;
+}

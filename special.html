@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特別商品</title>
+    <link rel="stylesheet" href="special.css">
+</head>
+
+<body>
+    <header>特別商品</header>
+
+    <div class="container">
+        <div class="product-box">
+            <img src="image/s1.jpg" alt="特別商品1">
+            <h3>特別商品 1</h3>
+            <p class="price">$500</p>
+            <p>限量版特別商品，數量有限，搶購從速！</p>
+            <button onclick="addToCart(this)">加入購物車</button>
+        </div>
+
+        <div class="product-box">
+            <img src="image/s2.jpg" alt="特別商品2">
+            <h3>特別商品 2</h3>
+            <p class="price">$750</p>
+            <p>高端設計，展現品味與獨特魅力。</p>
+            <button onclick="addToCart(this)">加入購物車</button>
+        </div>
+
+        <div class="product-box">
+            <img src="image/s3.jpg" alt="特別商品3">
+            <h3>特別商品 3</h3>
+            <p class="price">$1000</p>
+            <p>專屬定制款，為您打造與眾不同的體驗。</p>
+            <button onclick="addToCart(this)">加入購物車</button>
+        </div>
+
+        <div class="product-box">
+            <img src="image/s4.jpg" alt="特別商品4">
+            <h3>特別商品 4</h3>
+            <p class="price">$300</p>
+            <p>精選特別商品，適合日常收藏或禮品。</p>
+            <button onclick="addToCart(this)">加入購物車</button>
+        </div>
+
+        <div class="product-box">
+            <img src="image/s5.jpg" alt="特別商品5">
+            <h3>特別商品 5</h3>
+            <p class="price">$600</p>
+            <p>創意設計，讓您的收藏更具價值。</p>
+            <button onclick="addToCart(this)">加入購物車</button>
+        </div>
+    </div>
+
+    <a href="index.html" class="logo">
+        <img src="image/NBA_card_pack_logo_transparent.png" alt="返回首頁">
+    </a>
+
+    <a href="shop.html" class="cart-link">
+        <img src="image/be1d7df358f8dbc9336c5d88403c38c7-removebg-preview.png" alt="購物車">
+    </a>
+
+    <footer>
+        <p>&copy; 2024 特別商品商城. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart(button) {
+            const productBox = button.closest('.product-box');
+            const name = productBox.querySelector('h3').textContent;
+            const price = parseFloat(productBox.querySelector('.price').textContent.replace('$', ''));
+            const imageSrc = productBox.querySelector('img').src;
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, imageSrc, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} 已加入購物車！`);
+        }
+    </script>
+</body>
+
+</html>

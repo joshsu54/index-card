@@ -1,59 +1,88 @@
-/* Reset 基本樣式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-/* 訂單確認主容器樣式 */
 .order-confirmation-container {
-    width: 80%;
+    width: 90%;
+    max-width: 600px;
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
 }
 
-/* 標題樣式 */
+.order-confirmation-container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #c41f33;
 }
 
-/* 訂單詳細資料樣式 */
 .order-details {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .order-details p {
-    font-size: 18px;
-    margin: 5px 0;
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.6;
 }
 
-.order-details strong {
-    font-weight: bold;
-}
-
-/* 按鈕容器樣式 */
 .btn-container {
     text-align: center;
     margin-top: 20px;
 }
 
-/* 按鈕樣式 */
 .btn {
     background-color: #c41f33;
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
     background-color: #a31529;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background-color: #8e1220;
+    transform: translateY(1px);
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .order-confirmation-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .order-details p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }

@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c41f33;
+    font-size: 2rem;
+}
+
+/* FAQ 項目樣式 */
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h2 {
+    color: #c41f33;
+    font-size: 1.5rem;
+}
+
+.faq-item p,
+.faq-item ul,
+.faq-item ol {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faq-item ul,
+.faq-item ol {
+    padding-left: 20px;
+}
+
+.faq-item a {
+    color: #c41f33;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+    color: #a51e2a;
+}
+
+/* 返回鏈接 */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #c41f33;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+    background-color: #a51e2a;
+    transform: translateY(-2px);
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .faq-item {
+        padding: 10px;
+    }
+
+    .faq-item h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-item p {
+        font-size: 0.9rem;
+    }
+
+    .back-link {
+        font-size: 1rem;
+    }
+}

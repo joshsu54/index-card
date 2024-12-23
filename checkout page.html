@@ -106,7 +106,7 @@
 
         <!-- 提交訂單 -->
         <div class="form-group">
-            <button class="btn" onclick="submitOrder()">提交訂單</button>
+            <a id="submitOrderLink" href="confirm the order.html" class="btn" onclick="processOrder(event)">提交訂單</a>
         </div>
 
         <!-- 訂單總結 -->
@@ -133,7 +133,7 @@
 
             document.getElementById('discountAmount').textContent = `$${discountAmount.toFixed(2)}`;
             document.getElementById('finalAmount').textContent = `$${finalAmount.toFixed(2)}`;
-        }
+        };
 
         // 切換領取方式的顯示
         function togglePickupDetails() {
@@ -177,7 +177,7 @@
         }
 
         // 提交訂單
-        function submitOrder() {
+        function processOrder(event) {
             const discountCode = document.getElementById('discountCode').value;
             const paymentMethod = document.getElementById('paymentMethod').value;
             const pickupMethod = document.getElementById('pickupMethod').value;
@@ -213,9 +213,6 @@
             localStorage.setItem('discountAmount', discountAmount);
             localStorage.setItem('shippingCost', shippingCost);
             localStorage.setItem('finalAmount', finalAmount);
-
-            // 重定向到確認頁面
-            window.location.href = "http://127.0.0.1:5500/confirm%20the%20order.html";
         }
     </script>
 </body>

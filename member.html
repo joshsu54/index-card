@@ -5,117 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員登入</title>
-    <style>
-        /* 全局樣式 */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        /* 登入表單容器 */
-        .login-container {
-            background-color: white;
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* 表單標題 */
-        .login-container h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        /* 表單欄位 */
-        .login-container label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
-        }
-
-        .login-container input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 1rem;
-        }
-
-        .login-container input:focus {
-            border-color: #c41f33;
-            outline: none;
-        }
-
-        /* 提交按鈕 */
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #c41f33;
-            color: white;
-            font-size: 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .login-container button:hover {
-            background-color: #a51a28;
-        }
-
-        /* 註冊或忘記密碼連結 */
-        .login-container .extra-links {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .login-container .extra-links a {
-            color: #c41f33;
-            text-decoration: none;
-        }
-
-        .login-container .extra-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="member.css">
 </head>
 
 <body>
     <div class="login-container">
         <h2>會員登入</h2>
-        <form action="/login" method="post" onsubmit="return redirectToHomePage()">
+        <form action="#" method="post">
             <label for="email">電子郵件/電話號碼</label>
             <input type="email" id="email" name="email" placeholder="請輸入電子郵件" required>
 
             <label for="password">密碼</label>
             <input type="password" id="password" name="password" placeholder="請輸入密碼" required>
 
-            <button type="submit">登入</button>
+            <a href="index.html" class="btn" style="text-decoration:none;display:block;text-align:center;padding:10px;background-color:#c41f33;color:white;border-radius:4px;font-size:1rem;">登入</a>
 
             <div class="extra-links">
-                <a href="http://127.0.0.1:5500/Registered%20member.html">註冊新帳號</a> |
-                <a href="http://127.0.0.1:5500/forgot%20password.html">忘記密碼</a>
+                <a href="Registered member.html">註冊新帳號</a> |
+                <a href="forgot password.html">忘記密碼</a>
             </div>
         </form>
     </div>
-
-    <script>
-        function redirectToHomePage() {
-            // 這裡可以加入表單提交的邏輯，如果需要
-            window.location.href = 'https://joshsu54.github.io/index-card/';  // 跳轉到首頁
-            return false;  // 阻止表單提交
-        }
-    </script>
 </body>
 
 </html>
