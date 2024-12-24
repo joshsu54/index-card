@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>特別商品</title>
     <link rel="stylesheet" href="special.css">
+    <style>
+        .product-box img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>特別商品</header>
+    <header>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="card.html">單卡</a></li>
+                <li><a href="card box.html">卡盒</a></li>
+                <li><a href="card periphery.html">卡片周邊商品</a></li>
+                <li><a href="special.html">特別商品</a></li>
+                <li><a href="help.html">服務中心</a></li>
+                <li><a href="about.html">關於我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <h1>特別商品</h1>
 
     <div class="container">
+        <!-- 上方三個商品 -->
         <div class="product-box">
             <img src="image/s1.jpg" alt="特別商品1">
             <h3>特別商品 1</h3>
@@ -35,7 +63,10 @@
             <p>專屬定制款，為您打造與眾不同的體驗。</p>
             <button onclick="addToCart(this)">加入購物車</button>
         </div>
+    </div>
 
+    <!-- 下方兩個商品 -->
+    <div class="container">
         <div class="product-box">
             <img src="image/s4.jpg" alt="特別商品4">
             <h3>特別商品 4</h3>
