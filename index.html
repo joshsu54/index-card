@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -12,29 +12,15 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <!-- 左側分類 -->
-            <div class="nav-left">
-                <button onclick="toggleCategoryMenu()">☰ 分類</button>
-                <div class="category-menu" id="categoryMenu">
-                    <ul>
-                        <li><a href="card.html">卡</a></li>
-                        <li><a href="card box.html">卡盒</a></li>
-                        <li><a href="card periphery.html">卡片周邊商品</a></li>
-                        <li><a href="special.html">特別商品</a></li>
-                        <li><a href="help.html">服務中心</a></li>
-                        <li><a href="about.html">關於我們</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 中間標誌 -->
             <div class="logo">
                 <img src="image/NBA_card_pack_logo_transparent.png" alt="網站標誌">
                 <h1>NBA卡包商城</h1>
             </div>
-
-            <!-- 右側會員和購物車圖示 -->
             <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="你想查詢甚麼相關商品?">
+                    <button>🔍</button>
+                </div>
                 <a href="member.html">
                     <img src="image/images__1_-removebg-preview.png" alt="會員圖示">
                 </a>
@@ -43,21 +29,159 @@
                 </a>
             </div>
         </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="card.html">單卡</a></li>
+                <li><a href="card box.html">卡盒</a></li>
+                <li><a href="card periphery.html">卡片周邊商品</a></li>
+                <li><a href="special.html">特別商品</a></li>
+                <li><a href="help.html">服務中心</a></li>
+                <li><a href="about.html">關於我們</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero 區域 -->
-    <section class="hero">
-        <h1>歡迎來到我們的商城</h1>
-        <p>探索最新的商品和優惠</p>
-        <button class="btn-primary">立即購買</button>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>BASKETBALL CARDS</h1>
+            <p>中原第一家NBA球員卡商城!</p>
+            <a href="#limited-offers" class="btn-limited">開逛!</a>
+        </div>
+    </section>
+
+
+
+    <!-- 倒計時區 -->
+    <section class="countdown-banner">
+        <div class="countdown-section">
+            <h3 class="countdown-title">限時促銷倒計時</h3>
+            <p id="countdown-timer" class="countdown-timer">01:59:07</p>
+            <p class="countdown-message">立即選購，優惠不容錯過！</p>
+        </div>
+    </section>
+
+    <!-- 商品區 -->
+    <section id="limited-offers" class="limited-offers-section">
+        <h2>限時促銷商品</h2>
+        <div class="limited-product-grid">
+            <!-- 商品項目 -->
+            <div class="product-card" data-id="1" data-name="2009 Topps Chrome Jrue Holiday" data-price="50">
+                <img src="image/jrue3.jpeg" alt="2009 Topps Chrome Jrue Holiday">
+                <h3>2009 Topps Chrome Jrue Holiday</h3>
+                <p>優惠價：$50</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="2023 Panini NSCC Jayson Tatum" data-price="100">
+                <img src="image/jayson1.jpeg" alt="2023 Panini NSCC Jayson Tatum">
+                <h3>2023 Panini NSCC Jayson Tatum</h3>
+                <p>優惠價：$100</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="3" data-name="2023 Panini Prizm Jaylen Brown" data-price="70">
+                <img src="image/brown1.jpeg" alt="2023 Panini Prizm Jaylen Brown">
+                <h3>2023 Panini Prizm Jaylen Brown</h3>
+                <p>優惠價：$70</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="4" data-name="2022 Recon Jrue Holiday" data-price="55">
+                <img src="image/jrue1.jpeg" alt="2022 Recon Jrue Holiday">
+                <h3>2022 Recon Jrue Holiday</h3>
+                <p>優惠價：$55</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="5" data-name="2023 Select Jayson Tatum" data-price="95">
+                <img src="image/jayson2.jpeg" alt="2023 Select Jayson Tatum">
+                <h3>2023 Select Jayson Tatum</h3>
+                <p>優惠價：$95</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="6" data-name="2016 Select Jaylen Brown" data-price="60">
+                <img src="image/brown2.jpeg" alt="2016 Select Jaylen Brown">
+                <h3>2016 Select Jaylen Brown</h3>
+                <p>優惠價：$60</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="7" data-name="2021 Panini Mosaic Jrue Holiday" data-price="45">
+                <img src="image/jrue2.jpeg" alt="2021 Panini Mosaic Jrue Holiday">
+                <h3>2021 Panini Mosaic Jrue Holiday</h3>
+                <p>優惠價：$45</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="8" data-name="2023 Phoenix Jayson Tatum" data-price="85">
+                <img src="image/jayson3.jpeg" alt="2023 Phoenix Jayson Tatum">
+                <h3>2023 Phoenix Jayson Tatum</h3>
+                <p>優惠價：$85</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="9" data-name="2016 Panini Hoops Jaylen Brown" data-price="70">
+                <img src="image/brown3.jpeg" alt="2016 Panini Hoops Jaylen Brown">
+                <h3>2016 Panini Hoops Jaylen Brown</h3>
+                <p>優惠價：$70</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="10" data-name="2017 Donruss Derrick White" data-price="40">
+                <img src="image/White1.jpeg" alt="2017 Donruss Derrick White">
+                <h3>2017 Donruss Derrick White</h3>
+                <p>優惠價：$40</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="11" data-name="2018 Chrome Derrick White" data-price="45">
+                <img src="image/White2.jpeg" alt="2018 Chrome Derrick White">
+                <h3>2018 Chrome Derrick White</h3>
+                <p>優惠價：$45</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+            <div class="product-card" data-id="12" data-name="2023-24 Kristaps Porzingis" data-price="50">
+                <img src="image/porzingis.webp" alt=" 2023-24 Kristaps Porzingis">
+                <h3>2023-24 Kristaps Porzingis</h3>
+                <p>優惠價：$50</p>
+                <button onclick="addToCart(this)">加入購物車</button>
+            </div>
+        </div>
+        </div>
     </section>
 
     <script>
-        // 顯示或隱藏分類選單
-        function toggleCategoryMenu() {
-            const categoryMenu = document.getElementById("categoryMenu");
-            categoryMenu.style.display = categoryMenu.style.display === "block" ? "none" : "block";
+        function addToCart(button) {
+            const productCard = button.closest('.product-card');
+            const id = productCard.dataset.id;
+            const name = productCard.dataset.name;
+            const price = parseFloat(productCard.dataset.price);
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} 已加入購物車！`);
         }
+
+        function startCountdown(duration) {
+            const timerElement = document.getElementById("countdown-timer");
+            let time = duration;
+
+            const interval = setInterval(() => {
+                const hours = Math.floor(time / 3600);
+                const minutes = Math.floor((time % 3600) / 60);
+                const seconds = time % 60;
+
+                timerElement.textContent = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+                if (time <= 0) {
+                    clearInterval(interval);
+                    timerElement.textContent = "優惠已結束";
+                } else {
+                    time--;
+                }
+            }, 1000);
+        }
+
+        startCountdown(7200); // 倒計時 2 小時
     </script>
 </body>
 
