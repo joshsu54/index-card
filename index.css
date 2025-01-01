@@ -211,27 +211,6 @@ body {
     line-height: 1.6;
 }
 
-/* 商品區 */
-.limited-offers-section {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.limited-offers-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #003da5;
-}
-
-
-.limited-product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 每排 3 個商品 */
-    gap: 40px; /* 商品之間的間距 */
-    justify-content: center; /* 商品內容居中 */
-    max-width: 960px; /* 控制最大寬度 */
-    margin: 0 auto; /* 置中 */
-}
 
 
 .section-title {
@@ -279,99 +258,6 @@ body {
     background-color: #cececee1; /* 懸停時按鈕顏色 */
 }
 
-/* 商品展示區 */
-.index-products {
-    display: flex;
-    justify-content: flex-end;
-    padding: 40px 20px;
-}
-
-.product-container {
-    width: 70%;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    border-top: 1px solid var(--divider-color); /* 添加分隔線 */
-}
-
-.product-grid > .product-card {
-    padding-top: 20px; /* 與分隔線保持距離 */
-    border-bottom: 1px solid var(--divider-color); /* 每行下方分隔線 */
-}
-
-
-/* 商品卡片樣式 */
-.product-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%; /* 適應格子寬度 */
-}
-
-.product-card img {
-    width: 100%; /* 確保圖片寬度佔滿容器 */
-    height: 500px; /* 再增大圖片高度 */
-    object-fit: cover; /* 保持圖片比例並填充整個框 */
-    border-radius: 5px;
-    margin-bottom: 20px; /* 調整與下方文字的間距 */
-}
-
-.product-card h3 {
-    font-size: 1.2rem; /* 再增大標題字體 */
-    margin: 15px 0; /* 調整標題與圖片的距離 */
-    line-height: 1.5;
-    text-align: center; /* 確保標題文字居中 */
-}
-
-.product-card p {
-    color: #ff4500;
-    font-weight: bold;
-    font-size: 1.1rem; /* 增大價格字體 */
-    margin-bottom: 15px; /* 調整與按鈕的間距 */
-    text-align: center; /* 確保價格文字居中 */
-}
-
-.product-card button {
-    padding: 12px 16px;
-    background-color: var(--header-bg);
-    color: white;
-    font-size: 1.1rem; /* 增大按鈕字體 */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: auto; /* 確保按鈕在底部 */
-}
-
-.product-card button:hover {
-    background-color: #002b7a;
-}
-
-
-.add-to-cart-btn {
-    padding: 10px 14px; /* 增大按钮尺寸 */
-    background-color: var(--header-bg);
-    color: white;
-    font-size: 1rem; /* 增大字体 */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px; /* 增加按钮与价格的间距 */
-}
-
-.add-to-cart-btn:hover {
-    background-color: #002b7a; /* 按钮悬停效果 */
-}
 
 
 .btn-limited {
@@ -397,30 +283,7 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 鼠标悬停阴影变强 */
 }
 
-/* 倒計時區 */
-.countdown-banner {
-    background-color: #ffffffa0;
-    text-align: center;
-    padding: 20px 0;
-}
 
-.countdown-title {
-    font-size: 1.5rem;
-    color: #003da5;
-    margin-bottom: 10px;
-}
-
-.countdown-timer {
-    font-size: 1.8rem;
-    color: #ff4500;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.countdown-message {
-    font-size: 1rem;
-    color: #333;
-}
 
 /* 響應式設計 */
 @media screen and (max-width: 1200px) {

@@ -67,96 +67,6 @@
             <button class="ad-nav right" onclick="nextAd()">&#8250;</button>
         </div>
     </section>
-    <!--
-     倒計時區
-    <section class="countdown-banner">
-        <div class="countdown-section">
-            <h3 class="countdown-title">限時促銷倒計時</h3>
-            <p id="countdown-timer" class="countdown-timer">01:59:07</p>
-            <p class="countdown-message">立即選購，優惠不容錯過！</p>
-        </div>
-    </section>
-    
-    
-    <section id="limited-offers" class="limited-offers-section">
-        <h2>限時促銷商品</h2>
-        <div class="limited-product-grid">
-            /* 商品項目 */
-            <div class="product-card" data-id="1" data-name="2009 Topps Chrome Jrue Holiday" data-price="50">
-                <img src="image/jrue3.jpeg" alt="2009 Topps Chrome Jrue Holiday">
-                <h3>2009 Topps Chrome Jrue Holiday</h3>
-            </div>
-            <div class="product-card" data-id="2" data-name="2023 Panini NSCC Jayson Tatum" data-price="100">
-                <a href="ic1.html">
-                    <img src="image/jayson1.jpeg" alt="2023 Panini NSCC Jayson Tatum">
-                    <h3>2023 Panini NSCC Jayson Tatum</h3>
-                    <p>優惠價：$100</p>
-                    <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="3" data-name="2023 Panini Prizm Jaylen Brown" data-price="70">
-                <img src="image/brown1.jpeg" alt="2023 Panini Prizm Jaylen Brown">
-                <h3>2023 Panini Prizm Jaylen Brown</h3>
-                <p>優惠價：$70</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="4" data-name="2022 Recon Jrue Holiday" data-price="55">
-                <img src="image/jrue1.jpeg" alt="2022 Recon Jrue Holiday">
-                <h3>2022 Recon Jrue Holiday</h3>
-                <p>優惠價：$55</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="5" data-name="2023 Select Jayson Tatum" data-price="95">
-                <img src="image/jayson2.jpeg" alt="2023 Select Jayson Tatum">
-                <h3>2023 Select Jayson Tatum</h3>
-                <p>優惠價：$95</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="6" data-name="2016 Select Jaylen Brown" data-price="60">
-                <img src="image/brown2.jpeg" alt="2016 Select Jaylen Brown">
-                <h3>2016 Select Jaylen Brown</h3>
-                <p>優惠價：$60</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="7" data-name="2021 Panini Mosaic Jrue Holiday" data-price="45">
-                <img src="image/jrue2.jpeg" alt="2021 Panini Mosaic Jrue Holiday">
-                <h3>2021 Panini Mosaic Jrue Holiday</h3>
-                <p>優惠價：$45</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="8" data-name="2023 Phoenix Jayson Tatum" data-price="85">
-                <img src="image/jayson3.jpeg" alt="2023 Phoenix Jayson Tatum">
-                <h3>2023 Phoenix Jayson Tatum</h3>
-                <p>優惠價：$85</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="9" data-name="2016 Panini Hoops Jaylen Brown" data-price="70">
-                <img src="image/brown3.jpeg" alt="2016 Panini Hoops Jaylen Brown">
-                <h3>2016 Panini Hoops Jaylen Brown</h3>
-                <p>優惠價：$70</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="10" data-name="2017 Donruss Derrick White" data-price="40">
-                <img src="image/White1.jpeg" alt="2017 Donruss Derrick White">
-                <h3>2017 Donruss Derrick White</h3>
-                <p>優惠價：$40</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="11" data-name="2018 Chrome Derrick White" data-price="45">
-                <img src="image/White2.jpeg" alt="2018 Chrome Derrick White">
-                <h3>2018 Chrome Derrick White</h3>
-                <p>優惠價：$45</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-            <div class="product-card" data-id="12" data-name="2023-24 Kristaps Porzingis" data-price="50">
-                <img src="image/porzingis.webp" alt=" 2023-24 Kristaps Porzingis">
-                <h3>2023-24 Kristaps Porzingis</h3>
-                <p>優惠價：$50</p>
-                <button onclick="addToCart(this)">加入購物車</button>
-            </div>
-        </div>
-        </div>
-    </section>
-    -->
     <script>
         const ads = [
             { image: "image/must.jpg", text: "" },
@@ -187,46 +97,7 @@
         setInterval(() => {
             nextAd();
         }, 5000); // 每 5 秒自動切換
-
-        function addToCart(button) {
-            const productCard = button.closest('.product-card');
-            const id = productCard.dataset.id;
-            const name = productCard.dataset.name;
-            const price = parseFloat(productCard.dataset.price);
-
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingItem = cart.find(item => item.id === id);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ id, name, price, quantity: 1 });
-            }
-
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${name} 已加入購物車！`);
-        }
-
-        function startCountdown(duration) {
-            const timerElement = document.getElementById("countdown-timer");
-            let time = duration;
-
-            const interval = setInterval(() => {
-                const hours = Math.floor(time / 3600);
-                const minutes = Math.floor((time % 3600) / 60);
-                const seconds = time % 60;
-
-                timerElement.textContent = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-
-                if (time <= 0) {
-                    clearInterval(interval);
-                    timerElement.textContent = "優惠已結束";
-                } else {
-                    time--;
-                }
-            }, 1000);
-        }
-
-        startCountdown(7200); // 倒計時 2 小時
+        
     </script>
 </body>
 
