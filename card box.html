@@ -9,80 +9,90 @@
 </head>
 
 <body>
-    <header>
 
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="image/NBA_card_pack_logo_transparent.png" alt="網站標誌">
+                <h1>NBA卡包商城</h1>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="你想查詢甚麼相關商品?">
+                    <button>🔍</button>
+                </div>
+                <a href="member.html">
+                    <img src="image/images__1_-removebg-preview.png" alt="會員圖示">
+                </a>
+                <a href="shop.html">
+                    <img src="image/be1d7df358f8dbc9336c5d88403c38c7-removebg-preview.png" alt="購物車圖示">
+                </a>
+            </div>
+        </div>
         <nav class="nav-menu">
             <ul>
+                <li><a href="index.html">首頁</a></li>
                 <li><a href="card.html">單卡</a></li>
                 <li><a href="card box.html">卡盒</a></li>
                 <li><a href="card periphery.html">卡片周邊商品</a></li>
                 <li><a href="special.html">特別商品</a></li>
                 <li><a href="help.html">服務中心</a></li>
                 <li><a href="about.html">關於我們</a></li>
+                <li><a href="member_area.html">會員專區</a></li>
             </ul>
         </nav>
     </header>
 
-
-
-    <h1>卡盒展示</h1>
-
     <div class="container">
         <div class="card-boxes">
-            <div class="card-box" data-id="1" data-name="豪華卡盒 1" data-price="100">
-                <img src="image/messageImage_1734975466982.jpg" alt="卡盒1">
-                <h3>豪華卡盒 1</h3>
-                <p>內含限量卡片，滿足您的收藏需求。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="1">
+                <a href="cb1.html">
+                    <img src="image/messageImage_1734975466982.jpg" alt="卡盒1">
+                    <h3>Irving卡盒</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="2" data-name="精選卡盒 2" data-price="200">
-                <img src="image/messageImage_1734975325339.jpg" alt="卡盒2">
-                <h3>精選卡盒 2</h3>
-                <p>多張經典卡片，適合收藏家與玩家。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="2">
+                <a href="cb2.html">
+                    <img src="image/messageImage_1734975325339.jpg" alt="卡盒2">
+                    <h3>KD卡盒</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="3" data-name="經典卡盒 3" data-price="150">
-                <img src="image/messageImage_1734975121418.jpg" alt="卡盒3">
-                <h3>經典卡盒 3</h3>
-                <p>經典系列卡片，喚醒您的回憶與熱情。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="3">
+                <a href="cb3.html">
+                    <img src="image/messageImage_1734975121418.jpg" alt="卡盒3">
+                    <h3>Curry卡盒</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="4" data-name="限量卡盒 4" data-price="300">
-                <img src="image/messageImage_1734974795496.jpg" alt="卡盒4">
-                <h3>限量卡盒 4</h3>
-                <p>稀有限量卡片，僅此一批，不容錯過。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="4">
+                <a href="cb4.html">
+                    <img src="image/messageImage_1734974795496.jpg" alt="卡盒4">
+                    <h3>WNBA卡盒</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="5" data-name="豪華卡盒 5" data-price="250">
-                <img src="image/messageImage_1734974637632.jpg" alt="卡盒5">
-                <h3>豪華卡盒 5</h3>
-                <p>珍藏版卡片，為收藏家精心打造。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="5">
+                <a href="cb5.html">
+                    <img src="image/messageImage_1734974637632.jpg" alt="卡盒5">
+                    <h3>Kobe卡盒</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="6" data-name="精選卡盒 6" data-price="180">
-                <img src="image/messageImage_1734973070759.jpg" alt="卡盒6">
-                <h3>精選卡盒 6</h3>
-                <p>多張經典卡片，提升您的收藏價值。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="6">
+                <a href="cb6.html">
+                    <img src="image/messageImage_1734973070759.jpg" alt="卡盒6">
+                    <h3>Edward卡盒</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="7" data-name="經典卡盒 7" data-price="170">
-                <img src="image/messageImage_1734972793441.jpg" alt="卡盒7">
-                <h3>經典卡盒 7</h3>
-                <p>完整經典系列，適合熱愛卡片的您。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="7">
+                <a href="cb7.html">
+                    <img src="image/messageImage_1734972793441.jpg" alt="卡盒7">
+                    <h3>Luka Dončić卡盒</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="8" data-name="限量卡盒 8" data-price="400">
-                <img src="image/messageImage_1734975046035.jpg" alt="卡盒8">
-                <h3>限量卡盒 8</h3>
-                <p>頂級限量卡片，展現您的非凡品味。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="8">
+                <a href="cb8.html">
+                    <img src="image/messageImage_1734975046035.jpg" alt="卡盒8">
+                    <h3>LeBron卡盒</h3>
+                </a>
             </div>
         </div>
     </div>
@@ -90,40 +100,6 @@
     <footer>
         <p>&copy; 2024 卡片收藏商城. All rights reserved.</p>
     </footer>
-
-    <a href="index.html" class="logo">
-        <img src="image/NBA_card_pack_logo_transparent.png" alt="返回首頁">
-    </a>
-
-    <a href="shop.html" class="cart-link">🛒</a>
-
-    <script>
-        function addToCart(button) {
-            // 取得卡片資訊
-            const cardBox = button.closest('.card-box');
-            const id = cardBox.dataset.id; // 保持為字串類型，與 localStorage 中一致
-            const name = cardBox.dataset.name;
-            const price = parseFloat(cardBox.dataset.price);
-
-            // 從 localStorage 讀取現有購物車數據
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            // 檢查購物車中是否已有該商品
-            const existingItemIndex = cart.findIndex(item => item.id === id);
-
-            if (existingItemIndex >= 0) {
-                // 如果商品已存在，增加數量
-                cart[existingItemIndex].quantity += 1;
-            } else {
-                // 如果商品不存在，新增到購物車
-                cart.push({ id, name, price, quantity: 1 });
-            }
-
-            // 儲存回 localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${name} 已加入購物車！`);
-        }
-    </script>
 </body>
 
 </html>

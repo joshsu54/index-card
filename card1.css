@@ -1,4 +1,4 @@
-
+/* General Styles */
 :root {
     --header-bg: #003da5; /* 標題欄藍色背景 */
     --text-color: white; /* 標題文字白色 */
@@ -104,107 +104,130 @@ body {
     transform-origin: left;
 }
 
-h2 {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #c41f33;
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.card-boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card-box {
-    background-color: white;
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+/* Product Details Section */
+#product-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-.card-box img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+#product-image img {
+    max-width: 300px;
+    border-radius: 8px;
+    margin-right: 2rem;
 }
 
-.card-box h3 {
-    font-size: 1.2rem;
-    color: #c41f33;
-    margin-bottom: 10px;
+#product-info {
+    flex: 1;
 }
 
-.card-box p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    line-height: 1.5;
-    color: #555;
+#product-info h2 {
+    margin-bottom: 0.5rem;
 }
 
-.card-box button {
-    background-color: #c41f33;
+#product-info p {
+    margin: 0.5rem 0;
+}
+
+#product-info .stars {
+    color: #ffc107;
+}
+
+#product-info input[type="number"] {
+    width: 60px;
+    margin-left: 0.5rem;
+    padding: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#product-info button {
+    background-color: #ff5722;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
-.card-box button:hover {
-    background-color: #a51a28;
+#product-info button:hover {
+    background-color: #e64a19;
 }
 
+/* Product Description Section */
+#product-description {
+    margin-top: 2rem;
+}
+
+#product-description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Reviews Section */
+#reviews-section {
+    margin-top: 2rem;
+    border-top: 2px solid #0d6efd;
+    padding-top: 1rem;
+}
+
+#review-list {
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+#review-form {
+    margin-top: 1rem;
+}
+
+#review-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+#review-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 0.5rem;
+}
+
+#review-form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#review-form button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Footer Styles */
 footer {
+    text-align: center;
+    padding: 1rem 0;
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-radius: 0 0 8px 8px;
 }
-
-
-.card-box img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.card-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
-
-.card-boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-

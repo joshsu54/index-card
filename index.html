@@ -14,6 +14,7 @@
         <div class="header-container">
             <div class="logo">
                 <img src="image/NBA_card_pack_logo_transparent.png" alt="網站標誌">
+                <a href="card1.html"></a>
                 <h1>NBA卡包商城</h1>
             </div>
             <div class="nav-right">
@@ -31,28 +32,43 @@
         </div>
         <nav class="nav-menu">
             <ul>
+                <li><a href="index.html">首頁</a></li>
                 <li><a href="card.html">單卡</a></li>
                 <li><a href="card box.html">卡盒</a></li>
                 <li><a href="card periphery.html">卡片周邊商品</a></li>
                 <li><a href="special.html">特別商品</a></li>
                 <li><a href="help.html">服務中心</a></li>
                 <li><a href="about.html">關於我們</a></li>
+                <li><a href="member_area.html">會員專區</a></li>
             </ul>
         </nav>
     </header>
+
 
     <!-- Hero Banner -->
     <section class="hero-banner">
         <div class="hero-content">
             <h1>BASKETBALL CARDS</h1>
             <p>中原第一家NBA球員卡商城!</p>
-            <a href="#limited-offers" class="btn-limited">開逛!</a>
+            <a href="card.html" class="btn-limited">開逛!</a>
         </div>
     </section>
 
-
-
-    <!-- 倒計時區 -->
+    <!-- 動態廣告區 -->
+    <section class="dynamic-ad">
+        <div class="ad-container">
+            <button class="ad-nav left" onclick="prevAd()">&#8249;</button>
+            <div class="ad-content">
+                <a id="ad-link" href="card.html" target="_blank">
+                    <img id="ad-image" src="image/max (1).jpg" alt="廣告圖片">
+                </a>
+                <p id="ad-text"></p>
+            </div>
+            <button class="ad-nav right" onclick="nextAd()">&#8250;</button>
+        </div>
+    </section>
+    <!--
+     倒計時區
     <section class="countdown-banner">
         <div class="countdown-section">
             <h3 class="countdown-title">限時促銷倒計時</h3>
@@ -60,23 +76,22 @@
             <p class="countdown-message">立即選購，優惠不容錯過！</p>
         </div>
     </section>
-
-    <!-- 商品區 -->
+    
+    
     <section id="limited-offers" class="limited-offers-section">
         <h2>限時促銷商品</h2>
         <div class="limited-product-grid">
-            <!-- 商品項目 -->
+            /* 商品項目 */
             <div class="product-card" data-id="1" data-name="2009 Topps Chrome Jrue Holiday" data-price="50">
                 <img src="image/jrue3.jpeg" alt="2009 Topps Chrome Jrue Holiday">
                 <h3>2009 Topps Chrome Jrue Holiday</h3>
-                <p>優惠價：$50</p>
-                <button onclick="addToCart(this)">加入購物車</button>
             </div>
             <div class="product-card" data-id="2" data-name="2023 Panini NSCC Jayson Tatum" data-price="100">
-                <img src="image/jayson1.jpeg" alt="2023 Panini NSCC Jayson Tatum">
-                <h3>2023 Panini NSCC Jayson Tatum</h3>
-                <p>優惠價：$100</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+                <a href="ic1.html">
+                    <img src="image/jayson1.jpeg" alt="2023 Panini NSCC Jayson Tatum">
+                    <h3>2023 Panini NSCC Jayson Tatum</h3>
+                    <p>優惠價：$100</p>
+                    <button onclick="addToCart(this)">加入購物車</button>
             </div>
             <div class="product-card" data-id="3" data-name="2023 Panini Prizm Jaylen Brown" data-price="70">
                 <img src="image/brown1.jpeg" alt="2023 Panini Prizm Jaylen Brown">
@@ -141,8 +156,38 @@
         </div>
         </div>
     </section>
-
+    -->
     <script>
+        const ads = [
+            { image: "image/must.jpg", text: "" },
+            { image: "image/AD3.jpg", text: "" },
+            { image: "image/jordan.jpg", text: "" }
+        ];
+
+        let currentAdIndex = 0;
+        const adImage = document.getElementById("ad-image");
+        const adText = document.getElementById("ad-text");
+
+        function updateAd() {
+            adImage.src = ads[currentAdIndex].image;
+            adText.textContent = ads[currentAdIndex].text;
+        }
+
+        function nextAd() {
+            currentAdIndex = (currentAdIndex + 1) % ads.length;
+            updateAd();
+        }
+
+        function prevAd() {
+            currentAdIndex = (currentAdIndex - 1 + ads.length) % ads.length;
+            updateAd();
+        }
+
+        // 自動輪播廣告
+        setInterval(() => {
+            nextAd();
+        }, 5000); // 每 5 秒自動切換
+
         function addToCart(button) {
             const productCard = button.closest('.product-card');
             const id = productCard.dataset.id;

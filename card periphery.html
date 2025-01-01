@@ -20,97 +20,80 @@
 </head>
 
 <body>
-    <header>
 
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="image/NBA_card_pack_logo_transparent.png" alt="網站標誌">
+                <h1>NBA卡包商城</h1>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="你想查詢甚麼相關商品?">
+                    <button>🔍</button>
+                </div>
+                <a href="member.html">
+                    <img src="image/images__1_-removebg-preview.png" alt="會員圖示">
+                </a>
+                <a href="shop.html">
+                    <img src="image/be1d7df358f8dbc9336c5d88403c38c7-removebg-preview.png" alt="購物車圖示">
+                </a>
+            </div>
+        </div>
         <nav class="nav-menu">
             <ul>
+                <li><a href="index.html">首頁</a></li>
                 <li><a href="card.html">單卡</a></li>
                 <li><a href="card box.html">卡盒</a></li>
                 <li><a href="card periphery.html">卡片周邊商品</a></li>
                 <li><a href="special.html">特別商品</a></li>
                 <li><a href="help.html">服務中心</a></li>
                 <li><a href="about.html">關於我們</a></li>
+                <li><a href="member_area.html">會員專區</a></li>
             </ul>
         </nav>
     </header>
-
-    <h1>卡片周邊商品</h1>
-
     <div class="container">
         <div class="product-box" data-id="1">
-            <img src="image/box.jpg" alt="卡片保護套">
-            <h3>卡片保護套</h3>
-            <p class="price">$150</p>
-            <p>高品質透明保護套，延長卡片壽命。</p>
-            <button onclick="addToCart(this)">加入購物車</button>
+            <a href="cp1.html">
+                <img src="image/box.jpg" alt="卡片保護套">
+                <h3>卡片保護套</h3>
+            </a>
         </div>
 
         <div class="product-box" data-id="2">
-            <img src="image/box2.jpg" alt="卡片收納盒">
-            <h3>卡片收納盒</h3>
-            <p class="price">$300</p>
-            <p>堅固耐用，專為卡片收藏設計。</p>
-            <button onclick="addToCart(this)">加入購物車</button>
+            <a href="cp2.html">
+                <img src="image/box2.jpg" alt="卡片收納盒">
+                <h3>卡片收納盒</h3>
+            </a>
         </div>
 
         <div class="product-box" data-id="3">
-            <img src="image/box3.jpg" alt="卡片展示架">
-            <h3>卡片展示架</h3>
-            <p class="price">$200</p>
-            <p>美觀實用，完美展示您的珍藏卡片。</p>
-            <button onclick="addToCart(this)">加入購物車</button>
+            <a href="cp3.html">
+                <img src="image/box3.jpg" alt="卡片展示架">
+                <h3>卡片展示架</h3>
+            </a>
         </div>
 
         <div class="product-box" data-id="4">
-            <img src="image/box4.jpg" alt="卡片收納本">
-            <h3>卡片收納本</h3>
-            <p class="price">$250</p>
-            <p>大容量收納，方便攜帶與展示。</p>
-            <button onclick="addToCart(this)">加入購物車</button>
+            <a href="cp4.html">
+                <img src="image/box4.jpg" alt="卡片收納本">
+                <h3>卡片收納本</h3>
+            </a>
         </div>
 
         <div class="product-box" data-id="5">
-            <img src="image/box5.jpg" alt="清潔套件">
-            <h3>清潔套件</h3>
-            <p class="price">$100</p>
-            <p>專業清潔工具，保持卡片亮麗如新。</p>
-            <button onclick="addToCart(this)">加入購物車</button>
+            <a href="cp5.html">
+                <img src="image/box5.jpg" alt="清潔套件">
+                <h3>清潔套件</h3>
+            </a>
         </div>
     </div>
-
-    <a href="index.html" class="logo">
-        <img src="image/NBA_card_pack_logo_transparent.png" alt="返回首頁">
-    </a>
-
-    <a href="shop.html" class="cart-link">
-        <img src="image/be1d7df358f8dbc9336c5d88403c38c7-removebg-preview.png" alt="購物車">
-    </a>
 
     <footer>
         <p>&copy; 2024 卡片收藏商城. All rights reserved.</p>
     </footer>
-
-    <script>
-        function addToCart(button) {
-            const productBox = button.closest('.product-box');
-            const id = productBox.getAttribute('data-id');
-            const name = productBox.querySelector('h3').textContent;
-            const price = parseFloat(productBox.querySelector('.price').textContent.replace('$', ''));
-
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            const existingItem = cart.find(item => item.id === id);
-
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ id, name, price, quantity: 1 });
-            }
-
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${name} 已加入購物車！`);
-        }
-    </script>
 </body>
 
 </html>

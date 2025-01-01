@@ -6,11 +6,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .register-container {
     background: #ffffff;
-    padding: 20px;
+    padding: 15px; /* 減小內邊距以避免空間不足 */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -36,11 +37,12 @@ body {
 }
 
 .form-group input {
-    width: 100%;
+    width: calc(100% - 20px); /* 確保與父容器邊距保持一致 */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box; /* 包括內邊距在寬度內 */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 

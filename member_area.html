@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員專區</title>
+
+    <style>
+        :root {
+            --header-bg: #003da5;
+            /* 標題欄藍色背景 */
+            --text-color: white;
+            /* 標題文字白色 */
+            --search-bg: #ffffff;
+            /* 搜尋欄背景顏色 */
+            --search-border: #cccccc;
+            /* 搜尋欄邊框顏色 */
+            --search-placeholder: #888888;
+            /* 搜尋欄占位文字顏色 */
+            --search-button-bg: #ffffff;
+            /* 搜尋按鈕背景顏色 */
+            --search-button-color: white;
+            /* 搜尋按鈕文字顏色 */
+            --divider-color: #e0e0e0;
+            /* 分隔線顏色 */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            /* 淺灰背景 */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            /* LOGO 和店名置中 */
+            align-items: center;
+            /* 垂直居中 */
+            padding: 10px 20px;
+            background-color: var(--header-bg);
+            color: var(--text-color);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* 使右側圖示可以絕對定位 */
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* LOGO 和標題間距 */
+        }
+
+        .logo img {
+            height: 40px;
+            /* LOGO 尺寸 */
+            border-radius: 50%;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+
+        /* 右側會員和購物車圖示 */
+        .nav-right {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            /* 靠右對齊 */
+            transform: translateY(-50%);
+            display: flex;
+            gap: 40px;
+            /* 增大圖示之間的間距 */
+        }
+
+        .nav-right a img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* 分類導航樣式 */
+        .nav-menu {
+            background-color: var(--nav-bg);
+            padding: 15px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav-menu ul li a {
+            color: var(--nav-text-color);
+            /* 黑色文字 */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 15px;
+            position: relative;
+            /* 為底線動畫定位 */
+            overflow: hidden;
+            /* 隱藏底線動畫多餘部分 */
+            display: inline-block;
+        }
+
+        .nav-menu ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--hover-line);
+            /* 底線顏色 */
+            transform: scaleX(0);
+            /* 初始隱藏底線 */
+            transform-origin: right;
+            transition: transform 0.3s ease;
+            /* 動畫效果 */
+        }
+
+        .nav-menu ul li a:hover::after {
+            transform: scaleX(1);
+            /* 展開底線 */
+            transform-origin: left;
+        }
+
+        .member-area {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f9;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+
+
+
+        .back-to-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #c41f33;
+            text-decoration: none;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+            color: #a51a28;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="image/NBA_card_pack_logo_transparent.png" alt="網站標誌">
+                <a href="card1.html"></a>
+                <h1>NBA卡包商城</h1>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="你想查詢甚麼相關商品?">
+                    <button>🔍</button>
+                </div>
+                <a href="member.html">
+                    <img src="image/images__1_-removebg-preview.png" alt="會員圖示">
+                </a>
+                <a href="shop.html">
+                    <img src="image/be1d7df358f8dbc9336c5d88403c38c7-removebg-preview.png" alt="購物車圖示">
+                </a>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="card.html">單卡</a></li>
+                <li><a href="card box.html">卡盒</a></li>
+                <li><a href="card periphery.html">卡片周邊商品</a></li>
+                <li><a href="special.html">特別商品</a></li>
+                <li><a href="help.html">服務中心</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="member_area.html">會員專區</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="member-area">
+        <h2>會員專區</h2>
+
+        <div class="section">
+            <h3>修改資料</h3>
+            <form id="updateForm">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" value="姓名" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">電子郵件</label>
+                    <input type="email" id="email" name="email" value="example@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">地址</label>
+                    <input type="text" id="address" name="address" value="地址" required>
+                </div>
+                <button type="submit">更新資料</button>
+            </form>
+        </div>
+        </header>
+
+        <div class="section">
+            <h3>購物記錄</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>訂單日期</th>
+                        <th>商品</th>
+                        <th>金額</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-12-30</td>
+                        <td>Yao Ming card</td>
+                        <td>$2000</td>
+                    </tr>
+                    <tr>
+                        <td>2024-12-25</td>
+                        <td>卡片保護套</td>
+                        <td>$10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="index.html" class="back-to-home">回到首頁</a>
+    </div>
+
+    <script>
+        document.getElementById('updateForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('資料已更新！');
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+
+</html>

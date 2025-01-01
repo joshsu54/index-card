@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Card Pack</title>
+    <link rel="stylesheet" href="card1.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="logo">
+            <img src="image/NBA_card_pack_logo_transparent.png" alt="網站標誌">
+            <a href="card1.html"></a>
+            <h1>NBA卡包商城</h1>
+        </div>
+        <div class="nav-right">
+            <div class="search-bar">
+                <input type="text" placeholder="你想查詢甚麼相關商品?">
+                <button>🔍</button>
+            </div>
+            <a href="member.html">
+                <img src="image/images__1_-removebg-preview.png" alt="會員圖示">
+            </a>
+            <a href="shop.html">
+                <img src="image/be1d7df358f8dbc9336c5d88403c38c7-removebg-preview.png" alt="購物車圖示">
+            </a>
+        </div>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="card.html">單卡</a></li>
+            <li><a href="card box.html">卡盒</a></li>
+            <li><a href="card periphery.html">卡片周邊商品</a></li>
+            <li><a href="special.html">特別商品</a></li>
+            <li><a href="help.html">服務中心</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="member_area.html">會員專區</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="product-details">
+            <div id="product-image">
+                <img src="image/sj.jpg" alt="Shaivonte Aician Gilgeous-Alexander"
+                    style="max-width: 300px; border-radius: 8px;">
+            </div>
+            <div id="product-info">
+                <h2>Shaivonte Aician Gilgeous-Alexander card</h2>
+                <p><strong>價格:</strong>$1200</p>
+                <p>
+                    <strong>評分:</strong>
+                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    (4.0)
+                </p>
+                <label for="quantity">數量:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" style="width: 50px;">
+                <button id="add-to-cart">加入購物車</button>
+            </div>
+        </section>
+
+        <section id="product-description">
+            <h3>介紹</h3>
+            <p>
+                雷霆隊一哥,NBA巨星
+            </p>
+            <ul>
+                <li>MVP競爭者</li>
+                <li>攻防兼具的代表</li>
+                <li>一手中距離殺翻整個聯盟</li>
+            </ul>
+        </section>
+
+        <section id="reviews-section">
+            <h3>回饋</h3>
+            <div id="review-list">
+                <p>留言板</p>
+            </div>
+            <div id="review-form">
+                <h4>留下評論</h4>
+                <form id="reviewForm">
+                    <label for="rating">評分:</label>
+                    <select id="rating" name="rating">
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select><br>
+                    <label for="comment">評論:</label><br>
+                    <textarea id="comment" name="comment" rows="4" cols="50"
+                        placeholder="Write your review..."></textarea><br>
+                    <button type="submit">送出評論</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 NBA Collectibles</p>
+    </footer>
+    <script src="card.js" defer></script>
+</body>
+
+</html>

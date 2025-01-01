@@ -103,6 +103,70 @@ body {
     transform-origin: left;
 }
 
+.dynamic-ad {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.ad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ad-content {
+    position: relative;
+    text-align: center;
+}
+
+.ad-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ad-content p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.ad-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.ad-nav:hover {
+    background-color: #f4f4f4;
+}
+
+.ad-nav.left {
+    left: 10px;
+}
+
+.ad-nav.right {
+    right: 10px;
+}
+
+
 /* Hero Banner */
 .hero-banner {
     position: relative;

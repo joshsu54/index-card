@@ -9,89 +9,89 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-
+        <div class="header-container">
+            <div class="logo">
+                <img src="image/NBA_card_pack_logo_transparent.png" alt="網站標誌">
+                <h1>NBA卡包商城</h1>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="你想查詢甚麼相關商品?">
+                    <button>🔍</button>
+                </div>
+                <a href="member.html">
+                    <img src="image/images__1_-removebg-preview.png" alt="會員圖示">
+                </a>
+                <a href="shop.html">
+                    <img src="image/be1d7df358f8dbc9336c5d88403c38c7-removebg-preview.png" alt="購物車圖示">
+                </a>
+            </div>
+        </div>
         <nav class="nav-menu">
             <ul>
+                <li><a href="index.html">首頁</a></li>
                 <li><a href="card.html">單卡</a></li>
                 <li><a href="card box.html">卡盒</a></li>
                 <li><a href="card periphery.html">卡片周邊商品</a></li>
                 <li><a href="special.html">特別商品</a></li>
                 <li><a href="help.html">服務中心</a></li>
                 <li><a href="about.html">關於我們</a></li>
+                <li><a href="member_area.html">會員專區</a></li>
             </ul>
         </nav>
     </header>
 
-
-
-    <h1>卡片展示</h1>
-
-
     <div class="container">
         <div class="card-boxes">
-            <div class="card-box" data-id="1" data-name="Yao Ming" data-price="2000">
-                <img src="image/i.jpg" alt="卡片1">
-                <h3>Yao Ming</h3>
-                <p class="price">$2000</p>
-                <p>NBA歷史上最具影響力的亞洲球員，親身感受籃球巨人的非凡魅力！</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="1">
+                <a href="card1.html">
+                    <img src="image/i.jpg" alt="Yao Ming">
+                    <h3>Yao Ming</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="2" data-name="Anthony DeVante Edwards" data-price="1300">
-                <img src="image/J.jpg" alt="卡片2">
-                <h3>Anthony DeVante Edwards</h3>
-                <p class="price">$1300</p>
-                <p> NBA未來之星，進攻火力爆表，持續刷新紀錄，森林狼的得分機器，球迷口中的「蟻人」，魅力無法抵擋！</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="2">
+                <a href="card2.html">
+                    <img src="image/J.jpg" alt="Anthony DeVante Edwards">
+                    <h3>Anthony DeVante Edwards</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="3" data-name="Booker" data-price="1200">
-                <img src="image/book.jpg" alt="卡片3">
-                <h3>Booker</h3>
-                <p class="price">$1200</p>
-                <p>太陽隊靈魂人物，穩定得分機器，創造出無數史詩般的比賽瞬間！</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="3">
+                <a href="card3.html">
+                    <img src="image/book.jpg" alt="Booker">
+                    <h3>Booker</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="4" data-name="Donovan Mitchell" data-price="1500">
-                <img src="image/m.jpg" alt="卡片4">
-                <h3>Donovan Mitchell</h3>
-                <p class="price">$1500</p>
-                <p>被譽為「蜘蛛俠」的他，以爆發力和敏捷度席捲NBA，總能在關鍵時刻力挽狂瀾！</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="4">
+                <a href="card4.html">
+                    <img src="image/m.jpg" alt="Donovan Mitchell">
+                    <h3>Donovan Mitchell</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="5" data-name="Giannis Antetokounmpo" data-price="1800">
-                <img src="image/a.jpg" alt="卡片5">
-                <h3>Giannis Antetokounmpo</h3>
-                <p class="price">$1800</p>
-                <p>兩屆NBA最有價值球員，2021年總冠軍賽MVP，Giannis以他的統治力震撼世界籃球舞台！</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="5">
+                <a href="card5.html">
+                    <img src="image/a.jpg" alt="Giannis Antetokounmpo">
+                    <h3>Giannis Antetokounmpo</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="6" data-name="Jeremy Lin" data-price="800">
-                <img src="image/lin.jpg" alt="卡片6">
-                <h3>Jeremy Lin</h3>
-                <p class="price">$800</p>
-                <p>作為首位在NBA奪冠的華裔球員，他的故事激勵著全球無數籃球愛好者</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="6">
+                <a href="card6.html">
+                    <img src="image/lin.jpg" alt="Jeremy Lin">
+                    <h3>Jeremy Lin</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="7" data-name="Shaivonte Aician Gilgeous-Alexander" data-price="1200">
-                <img src="image/sj.jpg" alt="卡片7">
-                <h3>Shaivonte Aician Gilgeous-Alexander</h3>
-                <p class="price">$1200</p>
-                <p>SGA 在2023年首次入選NBA全明星，是當前聯盟的冉冉升起之星。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="7">
+                <a href="card7.html">
+                    <img src="image/sj.jpg" alt="Shaivonte Aician Gilgeous-Alexander">
+                    <h3>Shaivonte Aician Gilgeous-Alexander</h3>
+                </a>
             </div>
-
-            <div class="card-box" data-id="8" data-name="Luka Doncic" data-price="1400">
-                <img src="image/t77.jpg" alt="卡片8">
-                <h3>Luka Doncic</h3>
-                <p class="price">$1400</p>
-                <p>Luka 在NBA的首個賽季即斬獲 最佳新秀獎，並多次締造20+得分三雙的紀錄，刷新了NBA歷史。</p>
-                <button onclick="addToCart(this)">加入購物車</button>
+            <div class="card-box" data-id="8">
+                <a href="card8.html">
+                    <img src="image/t77.jpg" alt="Luka Doncic">
+                    <h3>Luka Doncic</h3>
+                </a>
             </div>
         </div>
     </div>
@@ -99,40 +99,6 @@
     <footer>
         <p>&copy; 2024 卡片收藏商城. All rights reserved.</p>
     </footer>
-
-    <a href="index.html" class="logo">
-        <img src="image/NBA_card_pack_logo_transparent.png" alt="返回首頁">
-    </a>
-
-    <a href="shop.html" class="cart-link">🛒</a>
-
-    <script>
-        function addToCart(button) {
-            // 取得卡片資訊
-            const cardBox = button.closest('.card-box');
-            const id = cardBox.dataset.id; // 保持為字串類型，與 localStorage 中一致
-            const name = cardBox.dataset.name;
-            const price = parseFloat(cardBox.dataset.price);
-
-            // 從 localStorage 讀取現有購物車數據
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            // 檢查購物車中是否已有該商品
-            const existingItemIndex = cart.findIndex(item => item.id === id);
-
-            if (existingItemIndex >= 0) {
-                // 如果商品已存在，增加數量
-                cart[existingItemIndex].quantity += 1;
-            } else {
-                // 如果商品不存在，新增到購物車
-                cart.push({ id, name, price, quantity: 1 });
-            }
-
-            // 儲存回 localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${name} 已加入購物車！`);
-        }
-    </script>
 </body>
 
 </html>
